@@ -1,8 +1,8 @@
-def say_hello(who="anonymous"):
-    print("Hello", who)
+def say_hello(age, name="anonymous" ):
+    return f'Hello {name}. you are {age} years old'
 
-say_hello("NICO")
-say_hello()
+hello = say_hello(33, "NICO")
+print(hello)
 
 def minus(a,b=0):
     return a - b
@@ -15,5 +15,6 @@ def p_plus(a,b):
 
 p_result = p_plus(2,3)
 r_result = r_plus(2,3)
+r_position_argu_result = r_plus(b=11, a=123)
 
-print(p_result, r_result)
+print(r_position_argu_result)
