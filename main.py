@@ -9,6 +9,6 @@ response = get(f"{base_url}{search_term}")
 if response.status_code != 200:
     print("Can't request website")
 else:
-    print(response.text)
-    res = BeautifulSoup(response.text)
+    soup = BeautifulSoup(response.text, "html.parser")
+    jobs = soup.find_all('section', class_="jobs")
     print(1)
